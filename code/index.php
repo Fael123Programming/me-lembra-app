@@ -30,10 +30,6 @@
         </div>
     </div>
     <div id="overlay-div"></div>
-    <?php 
-        $_SESSION['title_session'] = $_POST['title'];
-        echo $_SESSION[]
-    ?>
     <section id="task-section">
         <span id="no-tasks-span">No Tasks Registered</span>
     </section>
