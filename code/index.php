@@ -21,7 +21,7 @@
         </div>
         <br>
         <div class="modal-body">
-            <form id="task-form" action="" method="get">
+            <form id="task-form" action="" method="post">
                 <label for="title">Title:</label> <input type="text" name="title" id="title" maxlengh="200" minlength="1" placeholder="Enter a title to the task" required> <br> <br>
                 <label for="description">Description:</label> <textarea form="task-form" id="description" name="description" rows="5" cols="50" placeholder="Enter a description to the task" maxlength="300" required></textarea> <br> <br>
                 <label for="deadline">Deadline:</label> <input type="date" name="deadline" id="deadline" required> <br> <br>
@@ -30,6 +30,10 @@
         </div>
     </div>
     <div id="overlay-div"></div>
+    <?php 
+        $_SESSION['title_session'] = $_POST['title'];
+        echo $_SESSION[]
+    ?>
     <section id="task-section">
         <span id="no-tasks-span">No Tasks Registered</span>
     </section>
