@@ -1,0 +1,126 @@
+*, *::after, *::before {
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: #9e9e9d;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main-header {
+    margin-top: -21px;
+    margin-left: -8px;
+    margin-right: -8px;
+    background-color: #d93d00;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+#no-tasks-span {
+    position: absolute;
+    top: 400px;
+    left: 700px;
+    font-size: 30pt;
+    color: black;
+    opacity: 0.5;
+}
+
+#task-section {
+    text-align: center;
+}
+
+#new-task-btn {
+    position: absolute;
+    top: 30px;
+    right: 150px;
+}
+
+.main-buttons {
+    background-color: gray;
+    padding: 10px 15px;
+    font-size: 15pt;
+    box-shadow: 2px 2px 2px black;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+}
+
+.main-buttons:hover {
+    background-color: #525252;
+    color: white;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+    transition: 200ms ease-in-out;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.modal-header .title, .close-button {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 10px 15px;
+}
+
+.modal-header .close-button {
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.pointer-btn {
+    cursor: pointer;
+}
+
+#overlay-div {
+    position: fixed;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+}
+
+#overlay-div.active {
+    pointer-events: all;
+    opacity: 1;
+}
+
+textarea {
+    resize: none;
+}
+
+#task-form {
+    font-size: 15pt;
+}
+
+#title {
+    height: 30px;
+    width: 460px;
+}
